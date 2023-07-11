@@ -17,3 +17,18 @@ void corregirTexto(const char* archivoEntrada, const char* archivoSalida) {
         fclose(archivoEntradaPtr);
         return;
     }
+
+    char palabra[50];
+
+    /// Leer palabras del archivo de entrada
+    while (fscanf(archivoEntradaPtr, "%s", palabra) == 1) {
+        /// Comprobar si la palabra es "ecuador" 
+        if (strcmp(palabra, "ecuador") == 0) {
+            /// Comprobar si la primera letra es minúscula
+            if (islower(palabra[0])) {
+                /// Cambiar a mayúscula
+                palabra[0] = toupper(palabra[0]);
+            }
+        }
+
+        
