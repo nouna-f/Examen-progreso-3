@@ -30,5 +30,19 @@ void corregirTexto(const char* archivoEntrada, const char* archivoSalida) {
                 palabra[0] = toupper(palabra[0]);
             }
         }
+        /// Comprobar si la palabra es "ecuador." (con punto)
+        if (strcmp(palabra, "ecuador.") == 0) {
+            if (islower(palabra[0])) {
+                palabra[0] = toupper(palabra[0]);
+       
+            }
+        }
+        /// Comprobar si la palabra es "ecuador," (con coma)
+        if (strcmp(palabra, "ecuador,") == 0) {
+            if (islower(palabra[0])) {
+                palabra[0] = toupper(palabra[0]);
+      
+            }
+        }
 
         
